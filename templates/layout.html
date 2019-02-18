@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    {% block head %}
+    <title>{% block title %} {% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
