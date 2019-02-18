@@ -43,7 +43,7 @@ def blog_post():
 
 @app.route('/return_blogs', methods=["GET"])
 def return_blogs():
-	all_blogs = db.sesssion.query(Blogs.title, Blogs.author, Blogs.body).all()
+	all_blogs = db.session.query(Blogs.title, Blogs.author, Blogs.body).all()
 	return jsonify(all_blogs)
 
 @app.route('/return_blog/<id>', methods=["GET"])
